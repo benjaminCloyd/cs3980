@@ -1,0 +1,19 @@
+# Python related
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+venv/
+.venv/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# Editor / OS
+.DS_Store
+.vscode/
+
+# Environment variables
+.env
