@@ -1,4 +1,4 @@
-# HW2 (in /hw2)
+# Assignment 1 (in /assignment1)
 
 
 ## echo.py: echo 123
