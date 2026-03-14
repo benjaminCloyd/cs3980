@@ -21,3 +21,31 @@ There is also a progress panel to track your 1RM over time displaying some helpf
 ![Workout Tracker progress](images/progress.png)
 
 
+
+# Development
+
+A FastAPI + HTML/JS/CSS web application for tracking weightlifting sessions and visualizing estimated 1-rep max (1RM) progress over time.
+
+## Features
+ 
+- **CRUD for Sessions** — create, view, and delete workout sessions
+- **CRUD for Exercises** — log exercises with multiple sets (weight × reps) to any session
+- **Estimated 1RM** — automatically calculated per exercise using the **Epley formula**:
+  > `1RM = weight × (1 + reps / 30)`
+- **Progress Chart** — visualize your estimated 1RM over time for any exercise
+- **In-memory database** — all data stored in a Python list (no database setup required)
+
+## API Endpoints
+ 
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `GET` | `/sessions` | List all sessions |
+| `POST` | `/sessions` | Create a new session |
+| `GET` | `/sessions/{id}` | Get a session with its exercises |
+| `DELETE` | `/sessions/{id}` | Delete a session |
+| `POST` | `/sessions/{id}/exercises` | Add an exercise to a session |
+| `DELETE` | `/sessions/{id}/exercises/{ex_id}` | Remove an exercise |
+| `GET` | `/exercises` | List all unique exercise names |
+| `GET` | `/progress/{exercise_name}` | Get 1RM history for an exercise |
+
+
